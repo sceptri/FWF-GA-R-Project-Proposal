@@ -2,9 +2,10 @@
 \usepackage{proposal}
 \addbibresource{proposal.bib}
 
-\sfbacro{ACRONYM}
+% Both acronym and title are subject to change
+\sfbacro{OptimizationForFeatures}
 \subject{Proposal for International Principal Investigator Project}
-\title{Project title}
+\title{Optimization and optimal control of epilepsy-related dynamical systems with respect to signal features}
 
 \begin{document}
 
@@ -14,7 +15,18 @@
 \newpage
 
 \section{Current state of research}\label{sec:state}
-\cite{example}
+
+In nature, optimization may be viewed as a general principle from which many different mechanisms arise, be it plants turning to light as they grow or ants finding optimal paths to reach resources. Therefore, we can reasonably assume that certain observed phenomena may be a direct consequence of these hidden optimization processes. This opens up a question of how using this lens of optimization to view the current open problems in science can improve our understanding of them. 
+
+Applied mathematics and neuroscience have a long history of complementing each other in the quest to understand the intricacies of the brain. Mathematical models provide a structured way to analyze the dynamics of neuronal systems, offering insights that are difficult to achieve through experimental observation alone. In neuroscience, these models can be used to shed light on various topics such as memory encoding, or information processing, and the generation of rhythmic brain activity, which are closely connected to complex synchronization patterns in neuronal networks. 
+% TODO: Maybe add applications to other disciplines
+
+Abnormalities in rhythmic brain activity can be attributed to neurological disorders such as epilepsy. From the point of view of neuronal dynamics, these abnormalities manifest themselves as anomalous synchronization within neuronal networks and can lead to spontaneous seizures. Abnormal synchronization is often close tied with the presence of high-frequency oscillations (HFOs), very high-frequency oscillations (VFHOs), and ultra-fast oscillations (UFOs) within depth electroencephalographic (EEG) recordings from patients with focal epilepsy. This presumed connection has fueled the research interest due to the potential use as biomarkers for epileptogenic zones. Nonetheless, taking into account the physiological limitations of action potential firing rates, the exact governing mechanism for the generation of such high-frequency signals in neuronal networks remains a mystery.
+
+Existing research endeavors provide insight on how anti-phase synchronization can serve as a potential mechanism for the emergence of HFOs and VHFOs in epileptic EEG signals. Specifically, these analyses, based mostly on techniques of bifurcation theory, theoretically examined small numbers of coupled oscillators and provided numerical computations confirming the findings on a large variety of models and scenarios (including stochastic simulations of neuronal populations).
+% TODO: Improve this paragraph
+
+On the optimization side, optimal control theory (OCT) has proven to be invaluable to control oscillations and network synchrony, as it provides tools for computation of efficient stimulation for linear or non-linear systems. Usually, this is achieved via a provided reference trajectory, which the state of a given dynamical system should copy, and a cost functional balancing the input intensity with the discrepancy between the actual and desired state.
 
 \section{Aims of the project}\label{sec:aims}
 

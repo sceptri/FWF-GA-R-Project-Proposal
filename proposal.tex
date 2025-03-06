@@ -44,11 +44,24 @@ In particular, we aim to utilize the techniques of optimal network design \cite{
 
 In parallel, we strive to set up a mathematically rigorous notion of various signal features (e.g. frequency bands for spiking or bursting, interburst intervals, VHFOs, and UFOs, etc.) \cite{Wedler2022, Srivastava2016} to be used in optimization or epilepsy-event detection, etc. Together with modifications of the current optimization and optimal control methodologies to accommodate for requirements of certain signal features', such construction should allow for selection or definition of a more application-appropriate cost function, aiding the potential impact of the research.
 
-Our third goal lies mostly in system identification, where we wish to study derivative-free methods \cite{Bortz2023, Lejarza2022, Messenger2024}. Specifically, we will attempt identification of a network configuration from in vivo, in vitro and in silico experimental data \cite{Champion2019}. This will enhance our understanding of epileptic tissue and, ideally, improve the localization of the epileptogenic zone based on interictal biomarkers (HFOs, VHFOs and UFOs). The identification task should also be focused on discovering models or networks whose solution do not necessarily fit the experiment data exactly, but contain the same signal features.
+Our third goal lies mostly in system identification, where we wish to study derivative-free methods \cite{Bortz2023, Lejarza2022, Messenger2024}. Specifically, we will attempt identification of a network configuration from in vivo, in vitro and in silico experimental data \cite{Champion2019}. This will enhance our understanding of epileptic tissue and, ideally, improve the localization of the epileptogenic zone based on interictal biomarkers (HFOs, VHFOs and UFOs). Note that we would also like to explore the connection of optimal control and system identification. Importantly, the identification task should also be focused on discovering models or networks whose solution do not necessarily fit the experiment data exactly, but contain the same signal features.
 
 \section{Innovation}\label{sec:innovation}
 
+We perceive the key contributions to a broader scientific community in several areas. Firstly, the rigorous treatment of signal features should be relevant and highly useful not only in the field of neuroscience, but also among other fields where certain properties of an output signal of a controlled system are desired. Applications for a given system include detection of events, modeling thereof, and optimal control such that certain requirements on the features of the output signal are fulfilled.
+
+Crucial innovation of the proposed project lies in the application of the notion of signal features specifically to mathematical treatment of HFOs, VHFOs and even UFOs. We believe such approach can greatly enhance current modeling capabilities in this niche, providing sound explanation for the emergence of non-physiological frequencies in local mean field potential measurements and their importance as biomarkers. Moreover, studying ways of controlling the anomalous oscillations may likely prove fruitful in their suppression. By further exploring system identification from the complex EEG signals, possibly also constrained by certain signal features, it is plausible we will be able to exploit discovered structures in our benefit.
+
+% TODO: Maybe, add something about SINDyOC and derivative-free equation discovery methods (and OCT <-> eq. discovery relation)
+
 \section{Methods}\label{sec:methods}
+
+% TODO: Rewrite
+There are several ways one can go about mathematically defining the concept of a signal feature. One can use a simple way of choosing a reference function and then computing a sort of similarity metric (which probably leads to correlation between the reference and input signals). One can also deploy the theory of wavelets to allow for scalability and other transformations.
+
+Another possibility is to construct a topological invariant and employ the rather heavy machinery of topological data analysis to properly capture the essence of the feature. I would like to explore both possibilities.
+
+Let us also note the EEG data \cite{Brazdil2017} were measured using hippocampal depth electrode implanted within the presurgical investigation of patients suffering from drug-resistant focal epilepsy. The microelectrodes and macroelectrodes were spatially distributed, and the measured neural mass activities at different places were interconnected in the brain. This introduces the need to study and analYze the dynamics of the subsystems (subpopulations) of neural mass with various interconnections.
 
 \section{Work plan and timeline}\label{sec:workplan}
 

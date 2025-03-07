@@ -1,5 +1,6 @@
 \documentclass[a4paper,11pt]{scrartcl}
 \usepackage{proposal}
+\usepackage[usenames,dvipsnames,table]{xcolor}
 \addbibresource{proposal.bib}
 
 % Both acronym and title are subject to change
@@ -42,7 +43,7 @@ Our principal desire for this project is to connect the bifurcation theory and t
 
 In particular, we aim to utilize the techniques of optimal network design \cite{Motter2007} and optimal control \cite{Agrachev2023, Baggio2021} to achieve synchronous dynamics with characteristics related to the epileptogenic zone (under physiological constraints). As such, this should closely align with modeling of a local field potential using coupled networks, and performing certain optimization procedures with respect to coupling strengths or delays between oscillators. 
 
-In parallel, we strive to set up a mathematically rigorous notion of various signal features (e.g. frequency bands for spiking or bursting, interburst intervals, VHFOs, and UFOs, etc.) \cite{Wedler2022, Srivastava2016} to be used in optimization or epilepsy-event detection, etc. Together with modifications of the current optimization and optimal control methodologies to accommodate for requirements of certain signal features', such construction should allow for selection or definition of a more application-appropriate cost function, aiding the potential impact of the research.
+In parallel, we strive to set up a mathematically rigorous notion of various signal features (e.g. frequency bands for spiking or bursting, interburst intervals, VHFOs, and UFOs, etc.) \cite{Wedler2022, Srivastava2016} to be used in optimization or epilepsy-event detection, etc. Together with modifications of the current optimization and optimal control methodologies to accommodate for requirements of certain signal features, such construction should allow for selection or definition of a more application-appropriate cost function, aiding the potential impact of the research.
 
 Our third goal lies mostly in system identification, where we wish to study derivative-free methods \cite{Bortz2023, Lejarza2022, Messenger2024}. Specifically, we will attempt identification of a network configuration from in vivo, in vitro and in silico experimental data \cite{Champion2019}. This will enhance our understanding of epileptic tissue and, ideally, improve the localization of the epileptogenic zone based on interictal biomarkers (HFOs, VHFOs and UFOs). Note that we would also like to explore the connection of optimal control and system identification. Importantly, the identification task should also be focused on discovering models or networks whose solution do not necessarily fit the experiment data exactly, but contain the same signal features.
 
@@ -56,14 +57,83 @@ Crucial innovation of the proposed project lies in the application of the notion
 
 \section{Methods}\label{sec:methods}
 
-% TODO: Rewrite
-There are several ways one can go about mathematically defining the concept of a signal feature. One can use a simple way of choosing a reference function and then computing a sort of similarity metric (which probably leads to correlation between the reference and input signals). One can also deploy the theory of wavelets to allow for scalability and other transformations.
+% TODO: Find relevant citations (and be more specific) 
+There are several ways one could go about mathematically defining the concept of a signal feature. The most straightforward way is probably choosing a reference function, which should ideally capture the essence of our signal feature and a similarity metric, for example an inner product in a Hilbert space (inducing a correlation between the reference and input signals). Such idea should be compatible with the theory of wavelet transforms \cite{Gupta2005, Ganjalizadeh2022, Dirkx2023, Brochard2022, Rocha2011}, which incorporates the notion translations and scaling \cite{Mallat2009} -- two very important properties any reasonable signal feature definition must allow.
 
-Another possibility is to construct a topological invariant and employ the rather heavy machinery of topological data analysis to properly capture the essence of the feature. I would like to explore both possibilities.
+Another possible approach we have considered are techniques of topological data analysis \cite{Edelsbrunner2010}, namely the usage of topological invariants or persistent homologies \cite{Carriere2021, Nigmetov2024, Myers2022}. Although this approach requires far more theoretical background, it should possibly allow us to express a bigger collection of signal features in mathematically rigorous way. Moreover, either of these two methods can likely succeed each other and thus mitigate the risk of either being unsuitable.
 
-Let us also note the EEG data \cite{Brazdil2017} were measured using hippocampal depth electrode implanted within the presurgical investigation of patients suffering from drug-resistant focal epilepsy. The microelectrodes and macroelectrodes were spatially distributed, and the measured neural mass activities at different places were interconnected in the brain. This introduces the need to study and analYze the dynamics of the subsystems (subpopulations) of neural mass with various interconnections.
+We aim to perform optimal control using standard tools of calculus variations, like the Lagrange multiplier approach \cite{Kunisch2008}. Nonetheless, for the high dimensional case of optimal control of a neuronal network (with each node of the network being possibly a relatively high dimensional model of neuron itself), we may need to turn to more novel methods, such as geometric optimal control \cite{Jurdjevic1996, Agrachev2004}, taking advantage of the topology of the network \cite{Gao2022, Nishikawa2006, Gueant2019}, or exploiting the turnpike property \cite{Zaslavski2023, Gugat2024}.
+
+In terms of mathematical programming, convex optimization \cite{Boyd2004} and corresponding relaxations \cite{Eltved2021} seem favorable. For practical purposes, considerations regarding robust optimization \cite{Ben-Tal2009} will likely be necessary, as well as careful selection of numerical optimization methods, for example, (adaptive) Barzilai-Borwein method \cite{Zhou2024}. Network topology optimization primarily relies on combinatorial optimization \cite{Korte2005, Dai2011, Osmolovskii2023}, discrete calculus \cite{Grady2010}, and graph theory results.
+
+Let us also note the EEG data \cite{Brazdil2017} were measured using hippocampal depth electrode implanted within the presurgical investigation of patients suffering from drug-resistant focal epilepsy. The microelectrodes and macroelectrodes were spatially distributed, and the measured neural mass activities at different places were interconnected in the brain. This introduces the need to study and analyze the dynamics of the subsystems (subpopulations) of neural mass with various interconnections.
 
 \section{Work plan and timeline}\label{sec:workplan}
+
+We divide our proposed project into several TODO tasks spread out over the three year duration, see Table \ref{tab:Gantt}:
+
+\begin{itemize}
+    \item[\textbf{Task 1.}] Definition of key signal features (for example, frequency bands for spiking or bursting, VFHOs or UFOs, interburst intervals) via wavelet theory or topologically. Development of event detection techniques based on chosen methodology. Application of signal feature detection on real-world experimental data \cite{Brazdil2017}, building upon data analysis of \cite{Halastova2025}.
+    \item[\textbf{Task 2.}] Construction of loss functions corresponding to selected signal features for both optimization and optimal control scenarios. Building analytical and numerical methods for solving proposed problems, including, but not limited to, considerations of discretization, computational complexity, and robustness.
+\end{itemize}
+% TODO: Add anything non-method related (any visits/conferences?)
+
+\setlength\extrarowheight{3pt}
+\begin{table}[h!]
+    \centering
+     \addtolength{\tabcolsep}{-3pt}
+     \fontsize{10pt}{11pt}\selectfont
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{14}{|c|}{\cellcolor{gray!50} Year 1} \\
+    \hline
+    WP & Description & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
+    \hline
+    WP1 & Research WP1 & \cellcolor{blue!25} & \cellcolor{blue!25}& \cellcolor{blue!25} & \cellcolor{blue!25} & \cellcolor{blue!25} & \cellcolor{blue!25} D1.1 & \cellcolor{purple!25} & \cellcolor{purple!25} & \cellcolor{purple!25} & \cellcolor{purple!25} & \cellcolor{purple!25} D1.2 & \cellcolor{violet!50} M.P1\\
+     \hline
+    WP2 & Research WP2 & & & & & & & \cellcolor{green!25}& \cellcolor{green!25}& \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25}\\
+    \hline
+     & Research visit & & & & & & & \cellcolor{green!25} RV &  &  & & &\\
+    \hline
+     & Training &  &  & \cellcolor{blue!25} & \cellcolor{blue!25} & \cellcolor{blue!25} & \cellcolor{blue!25} T1 & \cellcolor{brown!25}  & \cellcolor{brown!25} & \cellcolor{brown!25} & \cellcolor{brown!25} & \cellcolor{brown!25} &  \cellcolor{brown!25} T2\\
+    \hline
+      & Dissemination \& Communication & \cellcolor{gray!25} S1 & \cellcolor{gray!25} C1 & & & \cellcolor{gray!25} Pub1 & \cellcolor{gray!25}  DMP & \cellcolor{gray!25}  DCP & \cellcolor{blue!25} & \cellcolor{blue!25} D.P & & &\\
+    \hline
+     & Review meetings & & & &  & \cellcolor{blue!25} R1.1 & & & &  &  \cellcolor{purple!25} R1.2 & &\\
+        \hline
+    \multicolumn{14}{|c|}{\cellcolor{gray!50}Year 2} \\
+    \hline
+    WP & Description & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24\\
+    \hline
+    WP2 & Research WP2 & \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25} D2 & \cellcolor{green!50} M.P2 & & & & &\\
+    \hline
+    WP3 & Research WP3 & & & & & &\cellcolor{orange!50} & \cellcolor{orange!50} & \cellcolor{orange!50} & \cellcolor{orange!50}& \cellcolor{orange!50}& \cellcolor{orange!50} D3 & \cellcolor{orange!75} M.P3\\
+    \hline
+     & Training & \cellcolor{gray!25} TPM  & \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50} &  \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50}  & \cellcolor{yellow!50} & \cellcolor{yellow!50} T3 \\
+    \hline
+     & Dissemination \& Communication & & \cellcolor{gray!25} C2 & & & \cellcolor{gray!25} Pub2 & \cellcolor{gray!25} C3 & &  & \cellcolor{gray!25} Pub3 & &  \cellcolor{gray!25} S2 &\\
+    \hline
+     & Review meetings & & & & & \cellcolor{green!25} R2  & & & & &\cellcolor{orange!50} R3 & &\\
+     \hline  
+     \multicolumn{14}{|c|}{\cellcolor{gray!50}Year 3} \\
+    \hline
+    WP & Description & 25 & 26 & 27 & 28 & 29 & 30 & 31 & 32 & 33 & 34 & 35 & 36\\
+    \hline
+    WP2 & Research WP2 & \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25} & \cellcolor{green!25} D2 & \cellcolor{green!50} M.P2 & & & & &\\
+    \hline
+    WP3 & Research WP3 & & & & & &\cellcolor{orange!50} & \cellcolor{orange!50} & \cellcolor{orange!50} & \cellcolor{orange!50}& \cellcolor{orange!50}& \cellcolor{orange!50} D3 & \cellcolor{orange!75} M.P3\\
+    \hline
+     & Training & \cellcolor{gray!25} TPM  & \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50} &  \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50} & \cellcolor{yellow!50}  & \cellcolor{yellow!50} & \cellcolor{yellow!50} T3 \\
+    \hline
+     & Dissemination \& Communication & & \cellcolor{gray!25} C2 & & & \cellcolor{gray!25} Pub2 & \cellcolor{gray!25} C3 & &  & \cellcolor{gray!25} Pub3 & &  \cellcolor{gray!25} S2 &\\
+    \hline
+     & Review meetings & & & & & \cellcolor{green!25} R2  & & & & &\cellcolor{orange!50} R3 & &\\
+     \hline  
+    \end{tabular}
+\caption{Gantt chart of our proposed project. Meanings of shorts are the following TODO}    
+\label{tab:Gantt}
+\end{table}
+
 
 \section{Associated research partners}\label{sec:partners}
 

@@ -5,6 +5,8 @@
 \usepackage{hyperref}
 \addbibresource{proposal.bib}
 
+\DeclareAcronym{UFO}{short=UFO, long=ultra-fast oscillation} %KB, changed to imaging, MU
+
 % Both acronym and title are subject to change
 \sfbacro{EpilepsyOptimization}
 \subject{Proposal for International Principal Investigator Project}
@@ -25,7 +27,7 @@
 % Applied mathematics and neuroscience have a long history of complementing each other in the quest to understand the intricacies of the brain. Mathematical models provide a structured way to analyze the dynamics of neuronal systems, offering insights that are difficult to achieve through experimental observation alone. In neuroscience, these models can be used to shed light on various topics such as memory encoding \cite{Rolls1996, Guzman2016}, or information processing, and the generation of rhythmic brain activity \cite{Hoppensteadt1997, Izhikevich2006, Song2018}, which are closely connected to complex synchronization patterns in neuronal networks. 
 % TODO: Maybe add applications to other disciplines
 
-Complex synchronization patterns in neuronal networks are linked to key capabilities of brain, such as memory encoding, information processing, or the generation rhythmic brain activity \cite{Izhikevich2006, Song2018}. Abnormalities in rhythmic brain activity can be attributed to neurological disorders, for example, epilepsy. From the point of view of neuronal dynamics, these abnormalities manifest themselves as anomalous synchronization within neuronal networks and can lead to spontaneous seizures \cite{Jiruska2013}. Abnormal synchronization is often close tied with the presence of high-frequency oscillations (HFOs), very high-frequency oscillations (VFHOs), and ultra-fast oscillations (UFOs) within depth electroencephalographic (EEG) recordings from patients with focal epilepsy. This presumed connection has fueled the research interest due to the potential use as biomarkers for epileptogenic zones \cite{Jacobs2008, Worrell2011, Staba2011, Jacobs2012, Zijlmans2012, Brazdil2017, Cimbalnik2018, Cimbalnik2020, Brazdil2023}. Nonetheless, taking into account the physiological limitations of action potential firing rates \cite{Gabbiani2010}, the exact governing mechanism for the generation of such high-frequency signals in neuronal networks remains a mystery \cite{Jiruska2017}.
+Complex synchronization patterns in neuronal networks are linked to key capabilities of brain, such as memory encoding, information processing, or the generation rhythmic brain activity \cite{Izhikevich2006, Song2018}. Abnormalities in rhythmic brain activity can be attributed to neurological disorders, for example, epilepsy. From the point of view of neuronal dynamics, these abnormalities manifest themselves as anomalous synchronization within neuronal networks and can lead to spontaneous seizures \cite{Jiruska2013}. Abnormal synchronization is often close tied with the presence of high-frequency oscillations (HFOs), very high-frequency oscillations (VFHOs), and \acp{UFO} within depth electroencephalographic (EEG) recordings from patients with focal epilepsy. This presumed connection has fueled the research interest due to the potential use as biomarkers for epileptogenic zones \cite{Jacobs2008, Worrell2011, Staba2011, Jacobs2012, Zijlmans2012, Brazdil2017, Cimbalnik2018, Cimbalnik2020, Brazdil2023}. Nonetheless, taking into account the physiological limitations of action potential firing rates \cite{Gabbiani2010}, the exact governing mechanism for the generation of such high-frequency signals in neuronal networks remains a mystery \cite{Jiruska2017}.
 
 Existing research endeavors provide insight on how anti-phase synchronization can serve as a potential mechanism for the emergence of HFOs and VHFOs in epileptic EEG signals \cite{Pribylova2024, Sevcik2024, Zathurecky2025}. Specifically, these analyses, based mostly on techniques of bifurcation theory, theoretically examined small numbers of coupled oscillators and provided numerical computations confirming the findings on a large variety of conductance-based neuron models and scenarios (including stochastic simulations of neuronal populations).
 % TODO: Add citations to other groups (if relevant)
@@ -45,19 +47,19 @@ Also, there has been an active area of research concerning synchronizability of 
 
 This project focuses on advancing the mathematical modeling of focal epilepsy, with an emphasis on identifying the structure and topology of neuron clusters that likely encompass epileptogenic zones. This is achieved through the analysis of multi-scale intracranial EEG measurements obtained from specialized electrodes. To examine relationships between measurements at varying granularities, relevant signal features will be defined, providing corresponding loss functions for employment of data-driven and optimization methods.
 
-We strive to set up a mathematically rigorous notion of various signal features (e.g. frequency bands for spiking or bursting, interburst intervals, VHFOs, and UFOs, etc.) \cite{Wedler2022} to be used in optimization or epileptic event detection, etc. Modification of current optimization and data-driven methodologies to accommodate for selected signal features is planned. Crucially, such construction should allow for definition and selection of appropriate properties of epileptic EEG signals at different granularities, enabling quantifiable comparison not only between each granularity level but also with simulated data.
+We strive to set up a mathematically rigorous notion of various signal features (e.g. frequency bands for spiking or bursting, interburst intervals, VHFOs, and \acp{UFO}, etc.) \cite{Wedler2022} to be used in optimization or epileptic event detection, etc. Modification of current optimization and data-driven methodologies to accommodate for selected signal features is planned. Crucially, such construction should allow for definition and selection of appropriate properties of epileptic EEG signals at different granularities, enabling quantifiable comparison not only between each granularity level but also with simulated data.
 
 In parallel, we aim to utilize the techniques of optimal network design and data-driven methods \cite{Baggio2021} to achieve synchronous dynamics with characteristics related to the epileptogenic zone (under physiological constraints). As such, this should closely align with modeling of LFP using coupled networks, and performing certain optimization procedures with respect to coupling strengths or delays between oscillators. 
 
-Our third goal lies mostly in system identification, where we wish to study derivative-free methods \cite{Bortz2023, Messenger2024}. Specifically, we will attempt identification of a network configuration from \textit{in vivo}, \textit{in vitro} and \textit{in silico} experimental data. This could provide a concrete neuronal cluster topology and, ideally, improve the localization of the epileptogenic zone based on interictal biomarkers (HFOs, VHFOs and UFOs). Importantly, the identification task should also be focused on discovering models or networks whose solution do not necessarily fit the experiment data exactly, but contain the same signal features.
+Our third goal lies mostly in system identification, where we wish to study derivative-free methods \cite{Bortz2023, Messenger2024}. Specifically, we will attempt identification of a network configuration from \textit{in vivo}, \textit{in vitro} and \textit{in silico} experimental data. This could provide a concrete neuronal cluster topology and, ideally, improve the localization of the epileptogenic zone based on interictal biomarkers (HFOs, VHFOs and \acp{UFO}). Importantly, the identification task should also be focused on discovering models or networks whose solution do not necessarily fit the experiment data exactly, but contain the same signal features.
 
 \section{Innovation}\label{sec:innovation}
 
 We perceive the key contributions to a broader scientific community in several areas. Firstly, the rigorous treatment of signal features should be relevant and highly useful not only in the field of neuroscience, but also among other fields where certain properties of an output signal of a controlled system are desired. In conjunction, development of optimization and data-driven methods affected or constrained by requirements on input or output signal properties should make this framework versatile. Applications for a given system might include detection of events, modeling thereof, and optimal control such that certain requirements on the features of the output signal are fulfilled.
 
-Nevertheless, primary innovation of the proposed project lies in the application of optimization, data-driven methods and the notion of signal features to extract insight about the structure and topology of epileptogenic neuronal clusters and how they behave on different spatial and measurement scales. This should shed more light on HFOs, VHFOs and UFOs and their role as biomarkers of epilepsy. Furthermore, these structural insights will likely be possible to use to improve focal epilepsy biomarkers, more accurately pinpointing the exact epileptogenic area.
+Nevertheless, primary innovation of the proposed project lies in the application of optimization, data-driven methods and the notion of signal features to extract insight about the structure and topology of epileptogenic neuronal clusters and how they behave on different spatial and measurement scales. This should shed more light on HFOs, VHFOs and \acp{UFO} and their role as biomarkers of epilepsy. Furthermore, these structural insights will likely be possible to use to improve focal epilepsy biomarkers, more accurately pinpointing the exact epileptogenic area.
 
-% Primary innovation of the proposed project lies in the application of the notion of signal features specifically to mathematical treatment of HFOs, VHFOs and even UFOs. We believe such approach can greatly enhance current modeling capabilities in this niche, providing sound explanation for the emergence of non-physiological frequencies in local mean field potential measurements and their importance as biomarkers. Moreover, studying ways of controlling the anomalous oscillations may likely prove fruitful in their suppression. By further exploring system identification from the complex EEG signals, possibly also constrained by certain signal features, it is plausible we will be able to exploit discovered structures in our benefit.
+% Primary innovation of the proposed project lies in the application of the notion of signal features specifically to mathematical treatment of HFOs, VHFOs and even \acp{UFO}. We believe such approach can greatly enhance current modeling capabilities in this niche, providing sound explanation for the emergence of non-physiological frequencies in local mean field potential measurements and their importance as biomarkers. Moreover, studying ways of controlling the anomalous oscillations may likely prove fruitful in their suppression. By further exploring system identification from the complex EEG signals, possibly also constrained by certain signal features, it is plausible we will be able to exploit discovered structures in our benefit.
 
 % TODO: Maybe, add something about SINDyOC and derivative-free equation discovery methods (and OCT <-> eq. discovery relation)
 
@@ -96,7 +98,7 @@ We divide our proposed project into 5 tasks spread out over the three year durat
 % 4. constrained network identification from real data and simulational validation
 
 \begin{itemize}
-    \item[\textbf{Task 1.}] \textit{(blue)} Definition of key signal features (for example, frequency bands for spiking or bursting, VHFOs or UFOs, interburst intervals) via wavelet theory or topologically. Development of event detection techniques based on chosen methodology for verification.
+    \item[\textbf{Task 1.}] \textit{(blue)} Definition of key signal features (for example, frequency bands for spiking or bursting, VHFOs or \acp{UFO}, interburst intervals) via wavelet theory or topologically. Development of event detection techniques based on chosen methodology for verification.
     
     \item[\textbf{Task 2.}] \textit{(purple)} Construction of loss functions corresponding to selected signal features for optimization and data-driven methods. Building analytical and numerical methods for solving proposed problems, including, but not limited to, considerations of discretization, computational complexity, and robustness. Proof-of-concept implementation and numerical experiments.
 
@@ -237,6 +239,11 @@ As this proposal is concerned with fundamental mathematical research, no ethical
 As this proposal is concerned with fundamental mathematical research, no sex-specific or gender-related aspects arise.
 
 
+\newpage
+
+\subsection{List of abbreviations}
+
+\printacronyms[heading=none, display=all]
 
 \newpage
 \section*{Annex 1: References}
@@ -255,35 +262,7 @@ As this proposal is concerned with fundamental mathematical research, no sex-spe
 \section*{Annex 3: CVs and descriptions of previous research achievements}
 
 % TODO: Unify style of both CVs and improve the formatting in general
-% TODO: Fix Clason's CV (sourced from the website)
-\textbf{Name}:  Univ.-Prof. Dr.rer.nat.  Christian Clason  \\
-\textbf{Email}: c.clason@uni-graz.at \\
-\textbf{ORCID}: \href{https://orcid.org/0000-0002-9948-8426}{0000-0002-9948-8426} \\
-\textbf{Research institution}: Department of Mathematics and Scientific Computing, University of Graz \\
-\textbf{Website}: \url{https://imsc.uni-graz.at/clason/} \\
-\textbf{Publications}: \url{https://imsc.uni-graz.at/clason/publications} \\
-% TODO: Add "..., relevant websites. In addition, a publicly accessible link to the list of all published publications is required"
-\textbf{Education}:
-\begin{enumerate}[leftmargin=2.5cm]
-    \item[December 2012] Habilitation in Mathematics, Karl-Franzens-University Graz
-    \item[December 2006] Doctorate in Mathematics, Technical University of Munich
-    \item[September 2001] Diploma in Mathematics, Ludwig-Maximilians-University Munich
-\end{enumerate}
-\textbf{Positions}:
-\begin{enumerate}[leftmargin=2.5cm]
-    \item[2021--now] University Professor, University of Graz
-    \item[2014--2021] University Professor (W2), University of Duisburg-Essen
-    \item[2013--2014] Associate Professor, University of Graz
-    \item[2009--2013] Assistant Professor, University of Graz
-    \item[2008--2009] Research Assistant, University of Graz
-    \item[2007--2008] Project assistant, University of Graz
-    \item[2001--2007] Research Associate, Technical University of Munich
-\end{enumerate}
-\textbf{Research interests}: nonsmooth optimization, pptimal control of differential equations, parameter identification \\
-% TODO: Add list of carreer breaks (if any)
-\textbf{Academic publications}:
-% TODO: Add selected publications
-% TODO: Add "Additional research achievements"
+\include{cv/clason}
 
 \textbf{Name}: RNDr. Lenka Přibylová, Ph.D. (previously Baráková) \\
 \textbf{Email}: pribylova@math.muni.cz \\

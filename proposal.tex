@@ -6,6 +6,15 @@
 \addbibresource{proposal.bib}
 
 \DeclareAcronym{UFO}{short=UFO, long=ultra-fast oscillation} %KB, changed to imaging, MU
+\DeclareAcronym{HFO}{short=HFO, long=high-frequency oscillation}
+\DeclareAcronym{VHFO}{short=VHFO, long=very-high-frequency oscillation}
+\DeclareAcronym{OCT}{short=OCT, long=optimal control theory}
+\DeclareAcronym{EEG}{short=EEG, long=electroencephalographic}
+\DeclareAcronym{LFP}{short=LFP, long=local field potential}
+\DeclareAcronym{SINDy}{short=SINDy, long=sparse identification of nonlinear dynamics}
+\DeclareAcronym{ECDC}{short=ECDC, long=European Center for Disease Prevention and Control}
+\DeclareAcronym{BISOP}{short=BISOP, long=Center for Modeling of Biological and Social Processes}
+\DeclareAcronym{UZIS}{short=ÚZIS, long=Institute of Health Information and Statistics of the Czech Republic}
 
 % Both acronym and title are subject to change
 \sfbacro{EpilepsyOptimization}
@@ -27,14 +36,14 @@
 % Applied mathematics and neuroscience have a long history of complementing each other in the quest to understand the intricacies of the brain. Mathematical models provide a structured way to analyze the dynamics of neuronal systems, offering insights that are difficult to achieve through experimental observation alone. In neuroscience, these models can be used to shed light on various topics such as memory encoding \cite{Rolls1996, Guzman2016}, or information processing, and the generation of rhythmic brain activity \cite{Hoppensteadt1997, Izhikevich2006, Song2018}, which are closely connected to complex synchronization patterns in neuronal networks. 
 % TODO: Maybe add applications to other disciplines
 
-Complex synchronization patterns in neuronal networks are linked to key capabilities of brain, such as memory encoding, information processing, or the generation rhythmic brain activity \cite{Izhikevich2006, Song2018}. Abnormalities in rhythmic brain activity can be attributed to neurological disorders, for example, epilepsy. From the point of view of neuronal dynamics, these abnormalities manifest themselves as anomalous synchronization within neuronal networks and can lead to spontaneous seizures \cite{Jiruska2013}. Abnormal synchronization is often close tied with the presence of high-frequency oscillations (HFOs), very high-frequency oscillations (VFHOs), and \acp{UFO} within depth electroencephalographic (EEG) recordings from patients with focal epilepsy. This presumed connection has fueled the research interest due to the potential use as biomarkers for epileptogenic zones \cite{Jacobs2008, Worrell2011, Staba2011, Jacobs2012, Zijlmans2012, Brazdil2017, Cimbalnik2018, Cimbalnik2020, Brazdil2023}. Nonetheless, taking into account the physiological limitations of action potential firing rates \cite{Gabbiani2010}, the exact governing mechanism for the generation of such high-frequency signals in neuronal networks remains a mystery \cite{Jiruska2017}.
+Complex synchronization patterns in neuronal networks are linked to key capabilities of brain, such as memory encoding, information processing, or the generation rhythmic brain activity \cite{Izhikevich2006, Song2018}. Abnormalities in rhythmic brain activity can be attributed to neurological disorders, for example, epilepsy. From the point of view of neuronal dynamics, these abnormalities manifest themselves as anomalous synchronization within neuronal networks and can lead to spontaneous seizures \cite{Jiruska2013}. Abnormal synchronization is often close tied with the presence of \acp{HFO}, \acp{VHFO}, and \acp{UFO} within depth \ac{EEG} recordings from patients with focal epilepsy. This presumed connection has fueled the research interest due to the potential use as biomarkers for epileptogenic zones \cite{Jacobs2008, Worrell2011, Staba2011, Jacobs2012, Zijlmans2012, Brazdil2017, Cimbalnik2018, Cimbalnik2020, Brazdil2023}. Nonetheless, taking into account the physiological limitations of action potential firing rates \cite{Gabbiani2010}, the exact governing mechanism for the generation of such high-frequency signals in neuronal networks remains a mystery \cite{Jiruska2017}.
 
-Existing research endeavors provide insight on how anti-phase synchronization can serve as a potential mechanism for the emergence of HFOs and VHFOs in epileptic EEG signals \cite{Pribylova2024, Sevcik2024, Zathurecky2025}. Specifically, these analyses, based mostly on techniques of bifurcation theory, theoretically examined small numbers of coupled oscillators and provided numerical computations confirming the findings on a large variety of conductance-based neuron models and scenarios (including stochastic simulations of neuronal populations).
+Existing research endeavors provide insight on how anti-phase synchronization can serve as a potential mechanism for the emergence of \acp{HFO} and \acp{VHFO} in epileptic \ac{EEG} signals \cite{Pribylova2024, Sevcik2024, Zathurecky2025}. Specifically, these analyses, based mostly on techniques of bifurcation theory, theoretically examined small numbers of coupled oscillators and provided numerical computations confirming the findings on a large variety of conductance-based neuron models and scenarios (including stochastic simulations of neuronal populations).
 % TODO: Add citations to other groups (if relevant)
 
-Crucially, the exact relationship between different granularities of neuron clusters is still unknown. More precisely, it remains an open problem how dynamics of intracellular activity of individual conductance-based neuron models, or even coupled neuronal networks consisting of several neurons, influences the local field potential (LFP) of the entire epileptogenic cluster. While synchronization between neurons (or their networks) is hypothesized to be a crucial mechanism behind epileptogenic activity, it remains to be seen how exactly is this achieved in the full-scale neuronal cluster and how it propagates to its LFP.
+Crucially, the exact relationship between different granularities of neuron clusters is still unknown. More precisely, it remains an open problem how dynamics of intracellular activity of individual conductance-based neuron models, or even coupled neuronal networks consisting of several neurons, influences the \ac{LFP} of the entire epileptogenic cluster. While synchronization between neurons (or their networks) is hypothesized to be a crucial mechanism behind epileptogenic activity, it remains to be seen how exactly is this achieved in the full-scale neuronal cluster and how it propagates to its LFP.
 
-On the side of optimization and optimal control theory (OCT), models of neuronal populations \cite{Salfenmoser2022, Salfenmoser2024} and their networks \cite{Chouzouris2021} have been the subject of open-loop optimal control techniques. Phase reduction \cite{Zlotnik2012, Dasanayake2011, Pietras2019} techniques were used for control of oscillatory phenomena exhibited by neuronal systems, dramatically simplifying the complex dynamics along stable limit cycles by a phase-only parametrization, allowing even for the study of large-scale networks \cite{Bomela2023}. Moreover, OCT has been used for control of oscillations and network synchrony in neuronal models \cite{Ruths2014, Orieux2024, Popovych2006, Costa2024}.
+On the side of optimization and \ac{OCT}, models of neuronal populations \cite{Salfenmoser2022, Salfenmoser2024} and their networks \cite{Chouzouris2021} have been the subject of open-loop optimal control techniques. Phase reduction \cite{Zlotnik2012, Dasanayake2011, Pietras2019} techniques were used for control of oscillatory phenomena exhibited by neuronal systems, dramatically simplifying the complex dynamics along stable limit cycles by a phase-only parametrization, allowing even for the study of large-scale networks \cite{Bomela2023}. Moreover, OCT has been used for control of oscillations and network synchrony in neuronal models \cite{Ruths2014, Orieux2024, Popovych2006, Costa2024}.
 % optimal control theory (OCT) has proven to be invaluable to control oscillations and network synchrony , as it provides tools for computation of efficient stimulation for linear or non-linear systems \cite{Kirk2004}. In particular, control of neuronal systems has been a target of intensive research \cite{Kao2019, Suppa2016, Liu2018} with closed-loop control and machine learning methods being put the task of optimizing stimulation protocols for the treatment of neurological disorders \cite{Yu2020} and modulating brain activity \cite{Tafazoli2020, Park2019}. Furthermore, models of neuronal populations \cite{Salfenmoser2022, Salfenmoser2024} and their networks \cite{Chouzouris2021} have been the subject of open-loop optimal control techniques. Phase reduction \cite{Zlotnik2012, Dasanayake2011, Pietras2019} techniques were used for control of oscillatory phenomena exhibited by neuronal systems, dramatically simplifying the complex dynamics along stable limit cycles by a phase-only parametrization, allowing even for the study of large-scale networks \cite{Bomela2023}. As a special case, we note that optimal control of oscillators can provide us with tools for a rapid control of systems in time-sensitive manner \cite{Kamzolkin2024, Santaniello2011}.
 
 Neuroscience primarily studies complex networks of a large number of intricately coupled neurons, where emergent properties play a key role in governing the dynamics. As such, system identification has been explored as a tool for aiding understanding of systems' structure, be it for identification of the systems as a whole \cite{Brunton2016}, the discovery of the network configurations \cite{Owens2022} or learning missing terms in dynamical systems undergoing bifurcations \cite{VortmeyerKley2021}. A large variety of approaches have been proposed to deal with input noise, robustness \cite{Kaheman2020, Rosafalco2024}, or utilization of problem-specific properties \cite{Bisheban2017, Jongeneel2022}. Additionally, system identification has been used to enhance other mathematical methods such as optimal control \cite{Morrison2021}, providing invaluable insights into the structure of the systems, which can then be exploited.
@@ -45,21 +54,21 @@ Also, there has been an active area of research concerning synchronizability of 
 
 % Our principal desire for this project is to connect the bifurcation theory and the optimization viewpoints to neuroscience with special emphasis on focal epilepsy. This connection should reveal currently hidden insights into the governing principles of dynamics of neuronal networks.
 
-This project focuses on advancing the mathematical modeling of focal epilepsy, with an emphasis on identifying the structure and topology of neuron clusters that likely encompass epileptogenic zones. This is achieved through the analysis of multi-scale intracranial EEG measurements obtained from specialized electrodes. To examine relationships between measurements at varying granularities, relevant signal features will be defined, providing corresponding loss functions for employment of data-driven and optimization methods.
+This project focuses on advancing the mathematical modeling of focal epilepsy, with an emphasis on identifying the structure and topology of neuron clusters that likely encompass epileptogenic zones. This is achieved through the analysis of multi-scale intracranial \ac{EEG} measurements obtained from specialized electrodes. To examine relationships between measurements at varying granularities, relevant signal features will be defined, providing corresponding loss functions for employment of data-driven and optimization methods.
 
-We strive to set up a mathematically rigorous notion of various signal features (e.g. frequency bands for spiking or bursting, interburst intervals, VHFOs, and \acp{UFO}, etc.) \cite{Wedler2022} to be used in optimization or epileptic event detection, etc. Modification of current optimization and data-driven methodologies to accommodate for selected signal features is planned. Crucially, such construction should allow for definition and selection of appropriate properties of epileptic EEG signals at different granularities, enabling quantifiable comparison not only between each granularity level but also with simulated data.
+We strive to set up a mathematically rigorous notion of various signal features (e.g. frequency bands for spiking or bursting, interburst intervals, \acp{VHFO}, and \acp{UFO}, etc.) \cite{Wedler2022} to be used in optimization or epileptic event detection, etc. Modification of current optimization and data-driven methodologies to accommodate for selected signal features is planned. Crucially, such construction should allow for definition and selection of appropriate properties of epileptic \ac{EEG} signals at different granularities, enabling quantifiable comparison not only between each granularity level but also with simulated data.
 
-In parallel, we aim to utilize the techniques of optimal network design and data-driven methods \cite{Baggio2021} to achieve synchronous dynamics with characteristics related to the epileptogenic zone (under physiological constraints). As such, this should closely align with modeling of LFP using coupled networks, and performing certain optimization procedures with respect to coupling strengths or delays between oscillators. 
+In parallel, we aim to utilize the techniques of optimal network design and data-driven methods \cite{Baggio2021} to achieve synchronous dynamics with characteristics related to the epileptogenic zone (under physiological constraints). As such, this should closely align with modeling of \ac{LFP} using coupled networks, and performing certain optimization procedures with respect to coupling strengths or delays between oscillators. 
 
-Our third goal lies mostly in system identification, where we wish to study derivative-free methods \cite{Bortz2023, Messenger2024}. Specifically, we will attempt identification of a network configuration from \textit{in vivo}, \textit{in vitro} and \textit{in silico} experimental data. This could provide a concrete neuronal cluster topology and, ideally, improve the localization of the epileptogenic zone based on interictal biomarkers (HFOs, VHFOs and \acp{UFO}). Importantly, the identification task should also be focused on discovering models or networks whose solution do not necessarily fit the experiment data exactly, but contain the same signal features.
+Our third goal lies mostly in system identification, where we wish to study derivative-free methods \cite{Bortz2023, Messenger2024}. Specifically, we will attempt identification of a network configuration from \textit{in vivo}, \textit{in vitro} and \textit{in silico} experimental data. This could provide a concrete neuronal cluster topology and, ideally, improve the localization of the epileptogenic zone based on interictal biomarkers (\acp{HFO}, \acp{VHFO} and \acp{UFO}). Importantly, the identification task should also be focused on discovering models or networks whose solution do not necessarily fit the experiment data exactly, but contain the same signal features.
 
 \section{Innovation}\label{sec:innovation}
 
 We perceive the key contributions to a broader scientific community in several areas. Firstly, the rigorous treatment of signal features should be relevant and highly useful not only in the field of neuroscience, but also among other fields where certain properties of an output signal of a controlled system are desired. In conjunction, development of optimization and data-driven methods affected or constrained by requirements on input or output signal properties should make this framework versatile. Applications for a given system might include detection of events, modeling thereof, and optimal control such that certain requirements on the features of the output signal are fulfilled.
 
-Nevertheless, primary innovation of the proposed project lies in the application of optimization, data-driven methods and the notion of signal features to extract insight about the structure and topology of epileptogenic neuronal clusters and how they behave on different spatial and measurement scales. This should shed more light on HFOs, VHFOs and \acp{UFO} and their role as biomarkers of epilepsy. Furthermore, these structural insights will likely be possible to use to improve focal epilepsy biomarkers, more accurately pinpointing the exact epileptogenic area.
+Nevertheless, primary innovation of the proposed project lies in the application of optimization, data-driven methods and the notion of signal features to extract insight about the structure and topology of epileptogenic neuronal clusters and how they behave on different spatial and measurement scales. This should shed more light on \acp{HFO}, \acp{VHFO} and \acp{UFO} and their role as biomarkers of epilepsy. Furthermore, these structural insights will likely be possible to use to improve focal epilepsy biomarkers, more accurately pinpointing the exact epileptogenic area.
 
-% Primary innovation of the proposed project lies in the application of the notion of signal features specifically to mathematical treatment of HFOs, VHFOs and even \acp{UFO}. We believe such approach can greatly enhance current modeling capabilities in this niche, providing sound explanation for the emergence of non-physiological frequencies in local mean field potential measurements and their importance as biomarkers. Moreover, studying ways of controlling the anomalous oscillations may likely prove fruitful in their suppression. By further exploring system identification from the complex EEG signals, possibly also constrained by certain signal features, it is plausible we will be able to exploit discovered structures in our benefit.
+% Primary innovation of the proposed project lies in the application of the notion of signal features specifically to mathematical treatment of \acp{HFO}, \acp{VHFO} and even \acp{UFO}. We believe such approach can greatly enhance current modeling capabilities in this niche, providing sound explanation for the emergence of non-physiological frequencies in local mean field potential measurements and their importance as biomarkers. Moreover, studying ways of controlling the anomalous oscillations may likely prove fruitful in their suppression. By further exploring system identification from the complex EEG signals, possibly also constrained by certain signal features, it is plausible we will be able to exploit discovered structures in our benefit.
 
 % TODO: Maybe, add something about SINDyOC and derivative-free equation discovery methods (and OCT <-> eq. discovery relation)
 
@@ -68,7 +77,7 @@ Nevertheless, primary innovation of the proposed project lies in the application
 % TODO: Find relevant citations (and be more specific) 
 For this project, we are considering two distinct ways of defining signal features -- wavelet theory and topological data analysis. Signal features defined via wavelet theory rely on choosing a reference function, which should ideally capture the essence of our signal feature, and a similarity metric (e.g. inner product in Hilbert space) \cite{Ganjalizadeh2022, Brochard2022, Rocha2011}. The benefit of the approach is the innate inclusion of the notion translations and scaling \cite{Mallat2009} -- two very important properties any reasonable signal feature definition must allow. Definition based on topological data analysis, namely topological invariants or persistent homologies \cite{Carriere2021, Myers2022}, requires far more theoretical background, but it should possibly allow for expression of a wider collection of signal features in mathematically rigorous way. Moreover, either of these two methods can likely succeed each other and thus mitigate the risk of either being unsuitable.
 
-Let us also note the EEG data \cite{Brazdil2017} were measured using hippocampal depth electrode implanted within the presurgical investigation of patients suffering from drug-resistant focal epilepsy. The micro-electrodes and macro-electrodes were spatially distributed, and the measured neural mass activities at different places were interconnected in the brain. This introduces the need to study and analyze the dynamics of the subsystems (subpopulations) of neural mass with various interconnections.
+Let us also note the \ac{EEG} data \cite{Brazdil2017} were measured using hippocampal depth electrode implanted within the presurgical investigation of patients suffering from drug-resistant focal epilepsy. The micro-electrodes and macro-electrodes were spatially distributed, and the measured neural mass activities at different places were interconnected in the brain. This introduces the need to study and analyze the dynamics of the subsystems (subpopulations) of neural mass with various interconnections.
 
 The seminal study of the relations between various granularities of the epileptogenic neuronal cluster is to be executed in an iterative fashion. For each iteration of this process, we will primarily specify relevant signal features (at each granularity) and constraints on network topology. With these assumptions, we will test whether we can explain the measured relationship between dynamics on micro- and macro-electrodes. Our secondary goal will be to identify a fitting network such that output signal of the model at each granularity is similar to the measured one.
 
@@ -98,20 +107,20 @@ We divide our proposed project into 5 tasks spread out over the three year durat
 % 4. constrained network identification from real data and simulational validation
 
 \begin{itemize}
-    \item[\textbf{Task 1.}] \textit{(blue)} Definition of key signal features (for example, frequency bands for spiking or bursting, VHFOs or \acp{UFO}, interburst intervals) via wavelet theory or topologically. Development of event detection techniques based on chosen methodology for verification.
+    \item[\textbf{Task 1.}] \textit{(blue)} Definition of key signal features (for example, frequency bands for spiking or bursting, \acp{VHFO} or \acp{UFO}, interburst intervals) via wavelet theory or topologically. Development of event detection techniques based on chosen methodology for verification.
     
     \item[\textbf{Task 2.}] \textit{(purple)} Construction of loss functions corresponding to selected signal features for optimization and data-driven methods. Building analytical and numerical methods for solving proposed problems, including, but not limited to, considerations of discretization, computational complexity, and robustness. Proof-of-concept implementation and numerical experiments.
 
-    \item[\textbf{Task 3.}] \textit{(green)} Modeling of LFP, as measured \cite{Brazdil2017} on macro-electrodes, and its relation of micro-electrodes' readings and individual conductance-based intracellular neuron models. Proposition of viable network topology families (i.e. prescribing given possible network connectivities) with respect to coupling strength and delays. Validation whether said topology can explain measured data.
+    \item[\textbf{Task 3.}] \textit{(green)} Modeling of \ac{LFP}, as measured \cite{Brazdil2017} on macro-electrodes, and its relation of micro-electrodes' readings and individual conductance-based intracellular neuron models. Proposition of viable network topology families (i.e. prescribing given possible network connectivities) with respect to coupling strength and delays. Validation whether said topology can explain measured data.
     
-    \item[\textbf{Task 4.}] \textit{(orange)} Study of (derivative-free) data-driven system discovery methods, possibly based on \textit{sparse identification of nonlinear dynamics} (SINDy) \cite{Brunton2016}, in collaboration with Dr. Sébastien Court from Innsbruck. Consideration of both theoretical analysis and numerical schemes, along with development of suitable numerical experiments. Application of system identification methods to data on individual neurons.
+    \item[\textbf{Task 4.}] \textit{(orange)} Study of (derivative-free) data-driven system discovery methods, possibly based on \ac{SINDy} \cite{Brunton2016}, in collaboration with Dr. Sébastien Court from Innsbruck. Consideration of both theoretical analysis and numerical schemes, along with development of suitable numerical experiments. Application of system identification methods to data on individual neurons.
 
     \item[\textbf{Task 5.}] \textit{(yellow)} Identification of a fitting neuronal network based on selected signal features and constraints on topology of the network from \textit{in vivo}, \textit{in vitro}, and \textit{in silico} data. Sensitivity analysis with respect to connection and/or neuron (network) removal.
 
     % \item[\textbf{Task 5.}] \textit{(yellow)} Parameter and network topology identification from \textit{in vivo} (see \textit{Task 1}), \textit{in vitro}, and \textit{in silico} data. Both theoretical analysis and numerical schemes will be considered, along with development of suitable numerical experiments. Our goal will be to discover models and networks, whose solution do not necessarily fit the experiment data exactly, but contain the same signal features.
 \end{itemize}
 
-We aim to submit a co-authored paper (mP1) on derivative-free system identification, inspired by SINDy, in collaboration with Dr. Sébastien Court from the University of Innsbruck. Additionally, we plan to apply event detection methods based on our signal features to real-world EEG measurements, contributing to a data analysis paper submission (mP2) in partnership mainly with Dr. Veronika Eclerová, Masaryk University. On a similar note, we expect to submit a publication on the framework of signal feature definition and subsequent optimization together with the results our methodology will yield in regards to LFP and the structure of epileptogenic neuronal networks (mP3).
+We aim to submit a co-authored paper (mP1) on derivative-free system identification, inspired by SINDy, in collaboration with Dr. Sébastien Court from the University of Innsbruck. Additionally, we plan to apply event detection methods based on our signal features to real-world \ac{EEG} measurements, contributing to a data analysis paper submission (mP2) in partnership mainly with Dr. Veronika Eclerová, Masaryk University. On a similar note, we expect to submit a publication on the framework of signal feature definition and subsequent optimization together with the results our methodology will yield in regards to LFP and the structure of epileptogenic neuronal networks (mP3).
 
 % TODO: Add anything non-method related (any visits/conferences?)
 
@@ -178,22 +187,24 @@ We aim to submit a co-authored paper (mP1) on derivative-free system identificat
 \label{tab:Gantt}
 \end{table}
 
-
 \section{Associated research partners}\label{sec:partners}
+% TODO: Rewrite this, because I have really no idea what this should include (should I be included here?)
 
-Main research partner to aid this project from the system-identification perspective is Assoc. Prof. \href{https://orcid.org/0000-0003-0005-5223}{Sébastien Court} from University of Innsbruck. He is an expert in data-driven techniques and optimization, which should offer key insight to selection, modification and verification of used methods.
+The fundamental research partnership for this project on the Austrian side consists of \textbf{\href{https://orcid.org/0000-0002-9948-8426}{Christian Clason}}, Professor of Mathematical Optimization at University of Graz and his upcoming doctoral student \textbf{\href{https://orcid.org/0009-0008-7823-6239}{Štěpán Zapadlo}}. This ensures necessary commitment and expertise in optimization and inverse problems to effectively solve objectives proposed in this document.
 
 \section{National and/or international cooperation partners}\label{sec:cooperations}
 
-The primary cooperation partner will be \textbf{\href{https://orcid.org/0000-0002-9027-4333}{Lenka Přibylová}}  (the applicant on the Czech Science Foundation side for this project proposal) and the Nonlinear Dynamics Team (see \url{https://science.math.muni.cz/ndteam/}) at Department of Mathematics and Statistics, which is a leader of. The group performs research primarily on applied nonlinear dynamics, constituting a major contributor to the understanding of synchronized coupled neurons and developing bifurcation theories relevant to neuronal behavior for the project.
+The primary cooperation partner will be \textbf{\href{https://orcid.org/0000-0002-9027-4333}{Associate Professor Lenka Přibylová}} (the applicant on the Czech Science Foundation side for this project proposal) and the \textit{\href{https://science.math.muni.cz/ndteam/}{Nonlinear Dynamics Team}} at Department of Mathematics and Statistics, which she is the leader of. The group performs research primarily on applied nonlinear dynamics, constituting a major contributor to the understanding of synchronized coupled neurons and developing bifurcation theories relevant to neuronal behavior for the project.
 
-Moreover, here, we list external specialists accessible through the Nonlinear Dynamics Team and CEITEC MUNI along with their relevance to the proposed project:
+Moreover, here, we list external specialists accessible through the Nonlinear Dynamics Team and CEITEC MU along with their relevance to the proposed project:
 \begin{itemize}
     \item \textbf{\href{https://orcid.org/0000-0001-7979-2343}{Milan Brázdil} and his team (Masaryk University):} As a clinical neurologist and head of the First Department of Neurology with vast knowledge and experience in both clinical practice and epilepsy research, Prof. Brázdil's expertise is a key component to validating, from the neurology point of view, the results of identification and optimization problems.
-    \item \textbf{\href{https://orcid.org/0000-0002-0232-9518}{Petr Klimeš} (Czech Academy of Sciences):} Expert in neuroengineering and a part of the team from the Institute of Scientific Instruments, CAS, which developed the EEG measurement electrodes and certain analysis techniques, improves the project's validation capabilities in regards to data-driven methods.
+    \item \textbf{\href{https://orcid.org/0000-0002-0232-9518}{Petr Klimeš} (Czech Academy of Sciences):} Expert in neuroengineering and a part of the team from the Institute of Scientific Instruments, Czech Academy of Sciences, which developed the \ac{EEG} measurement electrodes and certain analysis techniques, improves the project's validation capabilities in regards to data-driven methods.
     % Can/should I include Hil here?
     \item \textbf{\href{https://orcid.org/0000-0003-1526-3762}{Hil Meijer} (University of Twente):} An associate professor specializing in numerical bifurcation theory and computational neuroscience, Prof. Meijer provides expertise in mathematical modeling of neuronal dynamics via neural mass models.
 \end{itemize}
+
+Lastly, \textbf{\href{https://orcid.org/0000-0003-0005-5223}{Associate Professor Sébastien Court}} from University of Innsbruck, backs the proposed project from the system-identification side. He is an expert in data-driven techniques, which should offer key insight to selection, modification and verification of used methods.
 
 % The primary international cooperation partner will be Dr. Lenka Přibylová, Associate Professor of the Department of Mathematics and Statistics at Masaryk University (MU) -- the applicant on the Czech Science Foundation side for this project proposal. We believe that the combined expertise of both main participating parties is essential for the successful execution of the proposed project. In our opinion, Professor Clason's (University of Graz) extensive knowledge of mathematical programming and related variational methods perfectly complements Associate Professor Lenka Přibylová's (Masaryk University, Brno) proficiency in dynamical systems, bifurcation theory, and neurological modeling. This collaboration, as outlined in the proposed project, is expected to yield unique and significant results. Both international parties will be responsible for their respective parts of the project per areas of their expertise.
 
@@ -203,12 +214,9 @@ Moreover, here, we list external specialists accessible through the Nonlinear Dy
 
 % TODO: Add prof. Clason's qualifications
 
-% TODO: Check & update/reword (I mostly took it from the Deepta's MSCA proposal)
-
-
 \href{https://orcid.org/0000-0002-9027-4333}{\textbf{Associate Professor Lenka Přibylová}} is an active researcher in nonlinear dynamics and leads the \href{https://science.math.muni.cz/ndteam/}{Nonlinear Dynamics Team} at the Department of Mathematics and Statistics, Faculty of Science, Masaryk University. Her research interests include bifurcation theory, chaos, and the application of nonlinear dynamics in interdisciplinary fields such as neuroscience, biochemistry, population dynamics, and epidemiology. She is an expert in the usage and development of continuation methods in applied nonlinear dynamics, particularly with Matcont software. Her team collaborates with Prof. Hil Meijer from the University of Twente, a co-developer of Matcont, a widely used continuation program for detecting bifurcations.
 
-She leads interdisciplinary research in modeling neuronal dynamics related to epilepsy, collaborating with Milan Brázdil's research team at CEITEC and the Institute of Scientific Instruments of the Czech Academy of Sciences. During the COVID-19 pandemic, she was actively involved in the European COVID-19 Forecast Hub project under the European Centre for Disease Prevention and Control (ECDC). She also participated in a project for Monitoring, Analysis, and Management of Epidemic Situations with the Institute of Health Information and Statistics of the Czech Republic (\href{https://www.uzis.cz/}{ÚZIS}). Additionally, she is a member of the scientific committee of the Center for Modeling of Biological and Social Processes (\href{https://www.bisop.eu/}{BISOP}).
+She leads interdisciplinary research in modeling neuronal dynamics related to epilepsy, collaborating with Milan Brázdil's research team at CEITEC and the Institute of Scientific Instruments of the Czech Academy of Sciences. During the COVID-19 pandemic, she was actively involved in the European COVID-19 Forecast Hub project under the \Ac{ECDC}. She also participated in a project for Monitoring, Analysis, and Management of Epidemic Situations with the \href{https://www.uzis.cz/}{\Ac{UZIS}}. Additionally, she is a member of the scientific committee of the \href{https://www.bisop.eu/}{\Ac{BISOP}}.
 
 She has successfully collaborated with international teams and researchers from countries including the Netherlands, India, Austria, Ukraine, Russia, and South Africa, applying bifurcation theory. She aims to continue and expand collaborations with both domestic and international researchers in applied nonlinear dynamics, including the following:
 
@@ -218,17 +226,15 @@ She has successfully collaborated with international teams and researchers from 
     \item Data-driven Koopman methodology with Prof. Sébastien Court from the Department of Mathematics and Digital Science Center at the University of Innsbruck.
     \item Population biology with her former postdoc Deeptajyoti Sen and Prof. Malay Banerjee.
     \item Epidemiology with Prof. Luděk Berec from the University of South Bohemia.
-    \item Examining long-term adverse effects of vaccination and COVID-19 with BISOP and ÚZIS.
-    \item Notably, through joint doctoral studies of the applicant, a new collaboration with Prof. Christian Clason at the University of Graz will be established, focusing on optimization and machine learning in neuroscience, to develop advanced methods based on specific  characteristics of EEG and other neuronal signals. 
+    \item Examining long-term adverse effects of vaccination and COVID-19 with \ac{BISOP} and \ac{UZIS}.
+    \item Notably, through joint doctoral studies of the applicant, a new collaboration with Prof. Christian Clason at the University of Graz will be established, focusing on optimization and machine learning in neuroscience, to develop advanced methods based on specific  characteristics of \ac{EEG} and other neuronal signals. 
 \end{itemize}
 
 She has authored over 20 publications in top-rated international scientific journals, including \textit{Applied Mathematics and Computation}, \textit{Network Neuroscience}, \textit{Communications in Nonlinear Science and Numerical Simulation}, \textit{Journal of Mathematical Biology}, \textit{Journal of Mathematical Analysis and Applications}, \textit{Ecological Complexity}, or \textit{Mathematical Biosciences}.
 
 She has supervised or is currently supervising four Ph.D. students (plus one as a consultant), supervised one postdoctoral researcher under the Marie Skłodowska-Curie Actions Postdoctoral Fellowship, led one ERASMUS+ research internship, and mentored numerous master's and bachelor's students. She is also dedicated to popularization and educational activities for the general public.
 
-
-TODO the same \textbf{Prof. Christian Clason}
-
+TODO the same for \textbf{Prof. Christian Clason}
 
 \section{Ethical aspects}\label{sec:ethics}
 
@@ -252,14 +258,36 @@ As this proposal is concerned with fundamental mathematical research, no sex-spe
 \newpage
 \section*{Annex 2: Information on the research institution and requested funding}
 
-% TODO: Add funding!
-% Question: Can I be funded mostly by the FWF? It makes much more sense for me financially...
-% Also, can travel costs of train Brno-Graz be covered? I'm not sure if I'm eligible for any discounts and one-way ticket is 19 euro... So it would be nice
+The requested funding is predominantly for a PhD fellowship for three years. Salary rates were sourced from the \href{https://www.fwf.ac.at/en/funding/steps-to-your-fwf-project/further-information/personnel-costs}{FWF website}. For Associate Professor Lenka Přibylová a monthly salary of 400 € is considered, roughly corresponding to 0.1 full-time equivalent (FTE).
+
+% TODO: Can travel costs really be included?
+Moreover, travel costs between Brno and Graz are added for the PhD student, Štěpán Zapadlo, to ease mobility and allow for tighter cooperation of the two international teams. This mobility expense was estimated based on current rates of trains operated on the corresponding route. Thus, one-way ticket is assumed to cost 19 € regardless of direction and one trip in each direction every week is considered. Using 52 weeks in a year, this adds up to approximately 1,976 € in yearly travel costs.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{l|lll}
+             & 1st year  & 2nd year  & 3rd year  \\ \hline
+PhD salary   & 49,320.00 & 49,320.00 & 49,320.00 \\
+Travel costs & 1,976.00  & 1,976.00  & 1,976.00  \\
+L. Přibylová & 4,800.00  & 4,800.00  & 4,800.00  \\
+C. Clason    &           &           &           \\
+Conferences  &           &           &           \\ \hline
+total (€)    & 56,096.00 & 56,096.00 & 56,096.00
+\end{tabular}
+\end{table}
+
+Per the FWF regulations, additional 5\% unspecified project costs are added to the total sum.
+\begin{center}
+    \textbf{Grand total: 176,702.40 €}
+\end{center}
+
+% TODO: Split funding between FWF and GAČR (I'd like to be financed by GAČR for financial reasons)
+TODO Add FWF-GAČR funding split
 
 \newpage
 \section*{Annex 3: CVs and descriptions of previous research achievements}
 
-% TODO: Unify style of both CVs and improve the formatting in general
+% TODO: Unify style of all CVs
 \input{cv/clason.tex}
 
 \newpage
